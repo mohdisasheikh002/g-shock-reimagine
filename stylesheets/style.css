@@ -1,0 +1,71 @@
+@import "../stylesheets/font.css";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #121212;
+}
+
+.loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: bisque;
+  z-index: 999;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+}
+.wrapper .sec1 {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  overflow: hidden;
+}
+.wrapper .sec1 .nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2vmax 5vmax;
+  z-index: 99;
+}
+.wrapper .sec1 .heroImg {
+  position: absolute;
+  top: 101.5%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-89deg);
+  width: 120%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  transition: 0.25s linear;
+}
+.wrapper .sec2 {
+  height: 100vh;
+  width: 100%;
+  background-color: brown;
+}
+.wrapper .sec3 {
+  height: 100vh;
+  width: 100%;
+  background-color: slateblue;
+}
+.wrapper .sec4 {
+  height: 100vh;
+  width: 100%;
+  background-color: seagreen;
+}/*# sourceMappingURL=style.css.map */
