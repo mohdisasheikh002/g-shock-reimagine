@@ -64,7 +64,7 @@ function sec1() {
   tl1.to(
     ".heroImg",
     {
-      height: "70%",
+      height: "80%",
       top: "50%",
       rotate: "0deg",
     },

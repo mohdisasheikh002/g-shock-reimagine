@@ -46,6 +46,22 @@ body {
       z-index: 99;
     }
 
+    h1 {
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 14vmax;
+      line-height: 11vmax;
+      letter-spacing: 0.3vmax;
+      text-transform: uppercase;
+      text-align: center;
+      white-space: nowrap;
+      color: #fff9ed;
+      font-family: "Progress personal use";
+      font-weight: 500;
+    }
+
     .heroImg {
       position: absolute;
       top: 101.5%;
@@ -60,7 +76,7 @@ body {
   .sec2 {
     height: 100vh;
     width: 100%;
-    background-color: brown;
+    background-color: #000;
   }
   .sec3 {
     height: 100vh;

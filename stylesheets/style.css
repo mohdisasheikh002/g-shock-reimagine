@@ -44,6 +44,21 @@ body {
   padding: 2vmax 5vmax;
   z-index: 99;
 }
+.wrapper .sec1 h1 {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14vmax;
+  line-height: 11vmax;
+  letter-spacing: 0.3vmax;
+  text-transform: uppercase;
+  text-align: center;
+  white-space: nowrap;
+  color: #fff9ed;
+  font-family: "Progress personal use";
+  font-weight: 500;
+}
 .wrapper .sec1 .heroImg {
   position: absolute;
   top: 101.5%;
@@ -57,7 +72,7 @@ body {
 .wrapper .sec2 {
   height: 100vh;
   width: 100%;
-  background-color: brown;
+  background-color: #000;
 }
 .wrapper .sec3 {
   height: 100vh;
