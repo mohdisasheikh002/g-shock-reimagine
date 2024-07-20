@@ -9,7 +9,7 @@ html,
 body {
   height: 100%;
   width: 100%;
-  background-color: #121212;
+  background-color: #000;
 }
 
 .loader {
@@ -20,6 +20,50 @@ body {
   width: 100%;
   background-color: bisque;
   z-index: 999;
+}
+
+.menubtn {
+  position: fixed;
+  top: 2vmax;
+  right: 3vmax;
+  display: flex;
+  align-items: center;
+  gap: 0.6vmax;
+  opacity: 0;
+  z-index: -1;
+  cursor: pointer;
+  transition: 0.25s linear;
+}
+.menubtn .textbox {
+  position: relative;
+  height: 1.4vmax;
+  overflow: hidden;
+}
+.menubtn .textbox h5 {
+  transition: 0.25s linear;
+}
+.menubtn .linebox {
+  position: relative;
+  height: 0.8vmax;
+  width: 1.3vmax;
+}
+.menubtn .linebox .line {
+  position: absolute;
+  left: 48.3%;
+  transform: translate(-50%, -50%);
+  height: 0.1vmax;
+  width: 100%;
+  background-color: #fff;
+  transform-origin: center;
+}
+.menubtn .linebox .l1 {
+  top: 5%;
+}
+.menubtn .linebox .l2 {
+  top: 50%;
+}
+.menubtn .linebox .l3 {
+  top: 95%;
 }
 
 .wrapper {
@@ -36,27 +80,39 @@ body {
   background-color: #000;
   overflow: hidden;
 }
-.wrapper .sec1 .nav {
+.wrapper .sec1 .nav2 {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   padding: 2vmax 5vmax;
   z-index: 99;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.wrapper .sec1 .nav2 .right {
+  display: flex;
+  align-items: flex-end;
+  gap: 1.5vmax;
+}
+.wrapper .sec1 .nav2 .right i {
+  font-size: 1.3vmax;
+  cursor: pointer;
 }
 .wrapper .sec1 h1 {
   position: absolute;
-  top: 30%;
+  top: 37.7%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 14vmax;
-  line-height: 11vmax;
-  letter-spacing: 0.3vmax;
+  font-size: 13vmax;
+  line-height: 8.5vmax;
   text-transform: uppercase;
   text-align: center;
   white-space: nowrap;
-  color: #fff9ed;
-  font-family: "Progress personal use";
+  color: #121212;
+  font-family: "PPU";
   font-weight: 500;
 }
 .wrapper .sec1 .heroImg {
@@ -68,6 +124,92 @@ body {
   -o-object-fit: contain;
      object-fit: contain;
   transition: 0.25s linear;
+}
+.wrapper .sec1 .bottombox {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 2vmax 5vmax;
+  z-index: 99;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.wrapper .sec1 .bottombox .linkbox {
+  display: flex;
+  gap: 2vmax;
+}
+.wrapper .sec1 .bottombox .linkbox h6 {
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.wrapper .sec1 .bottombox .circular {
+  position: absolute;
+  bottom: 2.5vmax;
+  right: 5vmax;
+  border-radius: 50%;
+  width: 6vmax;
+  height: 6vmax;
+}
+.wrapper .sec1 .bottombox .circular svg {
+  fill: currentColor;
+  height: auto;
+  transform-origin: center;
+  width: 100%;
+  animation: rotateAnimation 30s linear infinite both;
+}
+@keyframes rotateAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.wrapper .sec1 .bottombox .circular .minicircle {
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  width: 0.5vmax;
+  height: 0.5vmax;
+  background-color: #e72830;
+}
+@media (max-width: 30cm) {
+  .wrapper .sec1 .nav2 {
+    padding: 2.5vmax;
+  }
+  .wrapper .sec1 .nav2 .right i {
+    font-size: 2vmax;
+  }
+  .wrapper .sec1 h1 {
+    left: 46%;
+    font-size: 15vmax;
+    line-height: 10.5vmax;
+  }
+  .wrapper .sec1 .heroImg {
+    width: 200%;
+  }
+  .wrapper .sec1 .bottombox {
+    padding: 2.5vmax;
+  }
+  .wrapper .sec1 .bottombox .linkbox {
+    gap: 2.5vmax;
+    flex-direction: column;
+  }
+  .wrapper .sec1 .bottombox .circular {
+    width: 12vmax;
+    height: 12vmax;
+    bottom: 2.5vmax;
+    right: 2.5vmax;
+  }
+  .wrapper .sec1 .bottombox .circular svg text {
+    word-spacing: 0.2vmax;
+  }
 }
 .wrapper .sec2 {
   height: 100vh;

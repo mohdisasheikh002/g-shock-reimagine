@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.css"
     />
@@ -12,9 +16,20 @@
   </head>
   <body>
     <!-- <div class="loader"></div> -->
+    <div class="menubtn">
+      <div class="textbox">
+        <h5 class="fs5 open">Menu</h5>
+        <h5 class="fs5 close">Close</h5>
+      </div>
+      <div class="linebox">
+        <div class="line l1"></div>
+        <div class="line l2"></div>
+        <div class="line l3"></div>
+      </div>
+    </div>
     <div class="wrapper">
       <div class="sec1">
-        <div class="nav">
+        <div class="nav2">
           <div class="left">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -30,17 +45,55 @@
               ></path>
             </svg>
           </div>
-          <div class="right"></div>
+          <div class="right">
+            <i class="ri-search-line"></i>
+            <i class="ri-heart-3-line"></i>
+            <i class="ri-shopping-bag-line"></i>
+            <i class="ri-earth-line"></i>
+          </div>
         </div>
         <h1>
           Absolute <br />
           toughness
         </h1>
         <img src="./assets/images/g-red.png" alt="" class="heroImg" />
+        <div class="bottombox">
+          <div class="linkbox">
+            <h6 class="fs6">Sports</h6>
+            <h6 class="fs6">Classic</h6>
+            <h6 class="fs6">Men</h6>
+            <h6 class="fs6">Women</h6>
+            <h6 class="fs6">Kids</h6>
+          </div>
+          <div class="circular">
+            <div class="minicircle"></div>
+            <svg viewBox="0 0 100 100" width="100" height="100">
+              <defs>
+                <path
+                  id="circle"
+                  d="
+                    M 50, 50
+                    m -37, 0
+                    a 37,37 0 1,1 74,0
+                    a 37,37 0 1,1 -74,0"
+                />
+              </defs>
+              <text
+                font-size="11"
+                style="letter-spacing: 0.05vmax; pointer-events: none"
+              >
+                <textPath xlink:href="#circle">
+                  CASIO CASIO CASIO CASIO CASIO CASIO
+                </textPath>
+              </text>
+            </svg>
+          </div>
+        </div>
       </div>
       <div class="sec2 sec"></div>
       <div class="sec3 sec"></div>
       <div class="sec4 sec"></div>
+      <div class="sec5 sec"></div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>

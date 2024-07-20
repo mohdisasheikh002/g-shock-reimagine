@@ -1,4 +1,37 @@
 @font-face {
-  src: url("../fonts/icon-casio.otf");
-  font-family: "gshock";
+  src: url("../fonts/ProgressPersonalUse-EaJdz.ttf");
+  font-family: "PPU";
+}
+
+@font-face {
+  src: url("../fonts/Manrope-Regular.ttf");
+  font-family: "manrope";
+}
+
+.fs5 {
+  font-size: 1vmax;
+  font-weight: 400;
+  letter-spacing: 0.02vmax;
+  color: #fff;
+  font-family: "manrope";
+}
+
+.fs6 {
+  font-size: 0.8vmax;
+  font-weight: 400;
+  letter-spacing: 0.05vmax;
+  color: #fff;
+  font-family: "manrope";
+}
+
+@media (max-width: 30cm) {
+  .fs5 {
+    font-size: 1.8vmax;
+    letter-spacing: 0.07vmax;
+  }
+
+  .fs6 {
+    font-size: 1.5vmax;
+    letter-spacing: 0.07vmax;
+  }
 }
