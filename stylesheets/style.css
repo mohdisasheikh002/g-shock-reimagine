@@ -66,6 +66,25 @@ body {
   top: 95%;
 }
 
+@media (max-width: 30cm) {
+  .menubtn {
+    right: 2.5vmax;
+  }
+  .menubtn .textbox {
+    height: 2vmax;
+  }
+  .menubtn .textbox h5 {
+    transition: 0.25s linear;
+  }
+  .menubtn .linebox {
+    height: 1.2vmax;
+    width: 2vmax;
+    margin-top: 0.5vmax;
+  }
+  .menubtn .linebox .line {
+    height: 0.15vmax;
+  }
+}
 .wrapper {
   position: relative;
   width: 100%;
@@ -160,6 +179,9 @@ body {
   width: 100%;
   animation: rotateAnimation 30s linear infinite both;
 }
+.wrapper .sec1 .bottombox .circular svg text {
+  font-family: "manrope";
+}
 @keyframes rotateAnimation {
   0% {
     transform: rotate(0deg);
@@ -183,8 +205,11 @@ body {
   .wrapper .sec1 .nav2 {
     padding: 2.5vmax;
   }
+  .wrapper .sec1 .nav2 .right {
+    gap: 2.5vmax;
+  }
   .wrapper .sec1 .nav2 .right i {
-    font-size: 2vmax;
+    font-size: 2.3vmax;
   }
   .wrapper .sec1 h1 {
     left: 46%;
