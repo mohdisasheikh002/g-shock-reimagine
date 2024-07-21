@@ -32,7 +32,6 @@ body {
   opacity: 0;
   z-index: -1;
   cursor: pointer;
-  transition: 0.25s linear;
 }
 .menubtn .textbox {
   position: relative;

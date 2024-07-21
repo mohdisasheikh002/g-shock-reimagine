@@ -61,11 +61,13 @@ function menu() {
       tl2
         .to(".l2", {
           width: "0%",
+          duration: 0.3,
         })
         .to(
           ".l1",
           {
             top: "50%",
+            duration: 0.3,
           },
           "efgh"
         )
@@ -73,6 +75,7 @@ function menu() {
           ".l3",
           {
             top: "50%",
+            duration: 0.3,
           },
           "efgh"
         )
@@ -80,6 +83,7 @@ function menu() {
           ".l1",
           {
             rotate: "45deg",
+            duration: 0.3,
           },
           "ijkl"
         )
@@ -87,6 +91,7 @@ function menu() {
           ".l3",
           {
             rotate: "-45deg",
+            duration: 0.3,
           },
           "ijkl"
         );
@@ -104,6 +109,7 @@ function menu() {
           ".l1",
           {
             rotate: "0deg",
+            duration: 0.3,
           },
           "ijkl"
         )
@@ -111,6 +117,7 @@ function menu() {
           ".l3",
           {
             rotate: "0deg",
+            duration: 0.3,
           },
           "ijkl"
         )
@@ -118,6 +125,7 @@ function menu() {
           ".l1",
           {
             top: "5%",
+            duration: 0.3,
           },
           "efgh"
         )
@@ -125,11 +133,13 @@ function menu() {
           ".l3",
           {
             top: "95%",
+            duration: 0.3,
           },
           "efgh"
         )
         .to(".l2", {
           width: "100%",
+          duration: 0.3,
         });
 
       toggle = true;
