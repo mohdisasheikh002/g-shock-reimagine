@@ -12,46 +12,55 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.css"
     />
+    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
     <link rel="stylesheet" href="./stylesheets/style.css" />
   </head>
   <body>
     <!-- <div class="loader"></div> -->
-    <div class="menubtn">
-      <div class="textbox">
-        <h5 class="fs5 open">Menu</h5>
-        <h5 class="fs5 close">Close</h5>
+    <div class="nav">
+      <div class="left">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="86.389"
+          height="14.629"
+          viewBox="0 0 86.389 14.629"
+          preserveAspectRatio="none"
+          class="gshock"
+        >
+          <path
+            d="M6.166 5.526h5.54v7.239l-1.863 1.82H1.9L0 12.765V1.825L1.781 0h7.986l1.858 1.825V4.8h-3.54V3.625H3.5v7.421h4.623v-1.9H6.166v-3.62zm6.944 3.6h5.338V5.587h-5.337zm10.322-3.5V3.641h4.625V4.8H31.7V1.826L29.777 0h-8.126l-1.82 1.864v5.382l1.941 1.918h6.206v1.9h-4.586V9.948h-3.579v2.862l1.88 1.777h8.124l1.9-1.739v-5.3l-1.84-1.919h-6.445zm18.311-.039h-4.559V0h-3.607v14.629h3.607V9.186h4.559v5.443h3.6V0h-3.6v5.586zM56.993 0l1.9 1.881v10.884l-1.883 1.82h-8.021l-1.782-1.759V1.9l1.9-1.9h7.888zm-1.7 3.581H50.81v7.464h4.483zM62.676 0l-1.9 1.825v10.941l1.781 1.82h8.121l1.843-1.821V9.109h-3.5v1.958h-4.583v-7.4H69v1.857h3.536v-3.7L70.719 0zm23.713 0h-4.4l-3.9 5.4V0H74.4v14.586h3.683v-5.24l3.843 5.24h4.361l-5.1-7.278z"
+            fill="#ffffff"
+          ></path>
+        </svg>
       </div>
-      <div class="linebox">
-        <div class="line l1"></div>
-        <div class="line l2"></div>
-        <div class="line l3"></div>
+      <div class="right">
+        <div class="searchbox">
+          <h5 class="fs5">Best sellers</h5>
+          <i class="ri-search-line"></i>
+        </div>
+        <i class="ri-user-fill icon"></i>
+        <i class="ri-shopping-bag-fill icon"></i>
+        <div class="menubtn icon">
+          <svg
+            class="ham hamRotate ham8"
+            viewBox="0 0 100 100"
+            onclick="this.classList.toggle('active')"
+          >
+            <path
+              class="line top"
+              d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"
+            />
+            <path class="line middle" d="m 30,50 h 40" />
+            <path
+              class="line bottom"
+              d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"
+            />
+          </svg>
+        </div>
       </div>
     </div>
     <div class="wrapper">
       <div class="sec1">
-        <div class="nav2">
-          <div class="left">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="86.389"
-              height="14.629"
-              viewBox="0 0 86.389 14.629"
-              preserveAspectRatio="none"
-              class="gshock"
-            >
-              <path
-                d="M6.166 5.526h5.54v7.239l-1.863 1.82H1.9L0 12.765V1.825L1.781 0h7.986l1.858 1.825V4.8h-3.54V3.625H3.5v7.421h4.623v-1.9H6.166v-3.62zm6.944 3.6h5.338V5.587h-5.337zm10.322-3.5V3.641h4.625V4.8H31.7V1.826L29.777 0h-8.126l-1.82 1.864v5.382l1.941 1.918h6.206v1.9h-4.586V9.948h-3.579v2.862l1.88 1.777h8.124l1.9-1.739v-5.3l-1.84-1.919h-6.445zm18.311-.039h-4.559V0h-3.607v14.629h3.607V9.186h4.559v5.443h3.6V0h-3.6v5.586zM56.993 0l1.9 1.881v10.884l-1.883 1.82h-8.021l-1.782-1.759V1.9l1.9-1.9h7.888zm-1.7 3.581H50.81v7.464h4.483zM62.676 0l-1.9 1.825v10.941l1.781 1.82h8.121l1.843-1.821V9.109h-3.5v1.958h-4.583v-7.4H69v1.857h3.536v-3.7L70.719 0zm23.713 0h-4.4l-3.9 5.4V0H74.4v14.586h3.683v-5.24l3.843 5.24h4.361l-5.1-7.278z"
-                fill="#ffffff"
-              ></path>
-            </svg>
-          </div>
-          <div class="right">
-            <i class="ri-search-line"></i>
-            <!-- <i class="ri-heart-3-line"></i> -->
-            <i class="ri-shopping-bag-line"></i>
-            <i class="ri-earth-line"></i>
-          </div>
-        </div>
         <h1>
           Absolute <br />
           toughness
@@ -59,11 +68,11 @@
         <img src="./assets/images/g-red.png" alt="" class="heroImg" />
         <div class="bottombox">
           <div class="linkbox">
-            <h6 class="fs6">Sports</h6>
-            <h6 class="fs6">Classic</h6>
-            <h6 class="fs6">Men</h6>
-            <h6 class="fs6">Women</h6>
-            <h6 class="fs6">Kids</h6>
+            <h5 class="fs5">Sports</h5>
+            <h5 class="fs5">Classic</h5>
+            <h5 class="fs5">Men</h5>
+            <h5 class="fs5">Women</h5>
+            <h5 class="fs5">Kids</h5>
           </div>
           <div class="circular">
             <div class="minicircle"></div>
@@ -90,15 +99,190 @@
           </div>
         </div>
       </div>
-      <div class="sec2 sec"></div>
-      <div class="sec3 sec"></div>
-      <div class="sec4 sec"></div>
-      <div class="sec5 sec"></div>
+      <div class="sec2">
+        <div class="circular">
+          <div class="minicircle"></div>
+          <svg viewBox="0 0 100 100" width="100" height="100">
+            <defs>
+              <path
+                id="circle"
+                d="
+                  M 50, 50
+                  m -37, 0
+                  a 37,37 0 1,1 74,0
+                  a 37,37 0 1,1 -74,0"
+              />
+            </defs>
+            <text
+              font-size="13.7"
+              style="letter-spacing: 0.02vmax; pointer-events: none"
+            >
+              <textPath xlink:href="#circle">SHOCK SHOCK SHOCK SHOCK</textPath>
+            </text>
+          </svg>
+        </div>
+        <div class="featuredbox">
+          <div class="left">
+            <h2 class="fs2">Master of g - land rangeman</h2>
+            <p class="fs5">
+              Designed to work even in the harshest environments, the RANGEMAN
+              GPR-H1000 from the MASTER of G line is a truly tough piece of
+              outdoor gear.
+            </p>
+            <button class="fs5">View more</button>
+          </div>
+          <div class="right">
+            <h1 class="fs1">GPR-Black</h1>
+            <div class="imgboxholder">
+              <div class="imgbox">
+                <img src="./assets/images/g-black.png" alt="" />
+              </div>
+              <div class="imgbox">
+                <img src="./assets/images/g-yellow.png" alt="" />
+              </div>
+              <!-- <div class="clickFollower">
+                <h5 class="fs5">Click</h5>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sec3">
+        <h1>Casio</h1>
+        <canvas></canvas>
+      </div>
+      <div class="canvas-relative cr1"></div>
+      <div class="canvas-relative cr2"></div>
+      <div class="canvas-relative cr3"></div>
+      <div class="canvas-relative cr4">
+        <div class="textbox">
+          <h4 class="fs4">▸ Unmatched durability, ultimate wrist companion.</h4>
+          <br />
+          <br />
+          <h4 class="fs4">▸ Timeless adventure, sleek and resilient.</h4>
+          <br />
+          <br />
+          <h4 class="fs4">▸ Bold design, rugged performance guaranteed.</h4>
+          <br />
+          <br />
+          <h4 class="fs4">▸ Perfect blend of toughness and style.</h4>
+          <br />
+          <br />
+          <h4 class="fs4">
+            ▸ Engineered for harshest conditions, elegant look.
+          </h4>
+          <br />
+          <br />
+          <h4 class="fs4">
+            ▸ Reliable features, modern sophistication assured.
+          </h4>
+        </div>
+      </div>
+      <div class="sec4">
+        <div class="marquee-box">
+          <div class="text-holder">
+            <h1 class="fs1 st">Shop new collection</h1>
+            <h1 class="fs1 st">Shop new collection</h1>
+            <h1 class="fs1 st">Shop new collection</h1>
+            <h1 class="fs1 st">Shop new collection</h1>
+            <h1 class="fs1 st">Shop new collection</h1>
+            <h1 class="fs1 st">Shop new collection</h1>
+            <h1 class="fs1 st">Shop new collection</h1>
+          </div>
+        </div>
+        <div class="watches">
+          <div class="watch">
+            <div class="detail magnet">
+              <h4 class="fs5">G-SHOCK GA-110</h4>
+              <h5 class="fs6">₹ 9,995</h5>
+            </div>
+            <img
+              class="watchimg"
+              src="./assets/images/collection-5.png"
+              alt="G-SHOCK GA-110"
+            />
+          </div>
+          <div class="watch">
+            <div class="detail magnet">
+              <h5 class="fs5">G-SHOCK GA-110</h5>
+              <h6 class="fs6">₹ 9,995</h6>
+            </div>
+            <img
+              class="watchimg"
+              src="./assets/images/collection-6.png"
+              alt="RANGEMAN GPR-H1000"
+            />
+          </div>
+          <div class="watch">
+            <div class="detail magnet">
+              <h5 class="fs5">G-SHOCK GA-110</h5>
+              <h6 class="fs6">₹ 9,995</h6>
+            </div>
+            <img
+              class="watchimg"
+              src="./assets/images/collection-4.png"
+              alt="G-SHOCK GA-B001"
+            />
+          </div>
+          <div class="watch">
+            <div class="detail magnet">
+              <h5 class="fs5">G-SHOCK GA-110</h5>
+              <h6 class="fs6">₹ 9,995</h6>
+            </div>
+            <img
+              class="watchimg"
+              src="./assets/images/collection-3.png"
+              alt="G-SHOCK GBX-100"
+            />
+          </div>
+          <div class="watch">
+            <div class="detail magnet">
+              <h5 class="fs5">G-SHOCK GA-110</h5>
+              <h6 class="fs6">₹ 9,995</h6>
+            </div>
+            <img
+              class="watchimg"
+              src="./assets/images/collection-2.png"
+              alt="G-SHOCK GA-2110SC"
+            />
+          </div>
+          <div class="watch">
+            <div class="detail magnet">
+              <h5 class="fs5">G-SHOCK GA-110</h5>
+              <h6 class="fs6">₹ 9,995</h6>
+            </div>
+            <img
+              class="watchimg"
+              src="./assets/images/collection-1.png"
+              alt="G-SQUAD GBD-H2000"
+            />
+          </div>
+        </div>
+      </div>
+      -->
+      <div class="sec5">
+        <video
+          autoplay
+          loop
+          muted
+          src="./assets/videos/journey-video.mp4"
+          class="reel"
+        ></video>
+        <h1 class="fs1 reeltext">Play reel</h1>
+        <p class="fs6">
+          Get best experience of "Toughness" in motion. <br />
+          Showcasing G-Shocks Journey.
+        </p>
+      </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/sheryjs/dist/Shery.js"
+    ></script>
     <script src="script.js"></script>
   </body>
 </html>
