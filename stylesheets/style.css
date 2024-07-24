@@ -103,6 +103,7 @@ body {
   border-radius: 50%;
   cursor: pointer;
   overflow: hidden;
+  pointer-events: none;
 }
 .nav .right .icon::after {
   content: "";
@@ -113,6 +114,7 @@ body {
   width: 100%;
   transition: 0.25s linear;
   background-color: #fff;
+  pointer-events: none;
 }
 .nav .right .icon:hover::after {
   top: -100%;
@@ -196,6 +198,43 @@ body {
   .nav .right .menubtn {
     height: 4.2vmax;
     width: 4.2vmax;
+  }
+}
+.menubox {
+  position: fixed;
+  bottom: 0%;
+  left: 0%;
+  height: 0vh;
+  width: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  padding: 0 4vmax;
+  z-index: 9;
+  transition: all cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.menubox .linkbox {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: center;
+}
+.menubox .linkbox a {
+  font-size: 7vmax;
+  line-height: 7.5vmax;
+  text-decoration: none;
+  display: block;
+  margin-right: 10vmax;
+  opacity: 0;
+}
+
+@media (max-width: 30cm) {
+  .menubox .linkbox a {
+    font-size: 9vmax;
+    line-height: 9.5vmax;
+    text-align: center;
   }
 }
 .wrapper {
@@ -470,6 +509,8 @@ body {
   width: 55%;
 }
 .wrapper .sec2 .featuredbox .right h1 {
+  position: absolute;
+  top: -13vmax;
   font-size: 15vmax;
   color: #000;
   font-family: "PPU";
@@ -543,7 +584,7 @@ body {
     align-items: flex-start;
     justify-content: flex-end;
     padding: 5vmax 2.5vmax;
-    gap: 8.5vmax;
+    gap: 13vmax;
   }
   .wrapper .sec2 .featuredbox .left {
     width: 100%;
@@ -566,9 +607,10 @@ body {
     width: 100%;
   }
   .wrapper .sec2 .featuredbox .right h1 {
-    top: 2.5%;
+    top: -6vmax;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-size: 11vmax;
   }
 }
 .wrapper .sec3 {
@@ -984,7 +1026,7 @@ body {
 @media (max-width: 30cm) {
   .wrapper .footer {
     padding: 2.3vmax 2.3vmax;
-    padding-top: 10vmax;
+    padding-top: 13vmax;
   }
   .wrapper .footer .elem1 {
     flex-direction: column;
@@ -998,9 +1040,9 @@ body {
     gap: 1.2vmax;
   }
   .wrapper .footer .elem1 .sociallinkbox i {
-    height: 4.2vmax;
-    width: 4.2vmax;
-    font-size: 1.8vmax;
+    height: 4.6vmax;
+    width: 4.6vmax;
+    font-size: 2.2vmax;
   }
   .wrapper .footer .elem2 {
     height: -moz-fit-content;

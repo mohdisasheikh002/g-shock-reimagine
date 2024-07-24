@@ -33,16 +33,30 @@ function locomotive() {
 locomotive();
 
 function loader() {
-  gsap.to(".loader img", {
-    opacity: 1,
-    width: "30%",
-    duration: 5,
-    onComplete: () => {
-      gsap.to(".loader img", {
-        opacity: 0,
-      });
-    },
-  });
+  if (window.screen.width > 850) {
+    gsap.to(".loader img", {
+      opacity: 1,
+      width: "50%",
+      duration: 4.5,
+      onComplete: () => {
+        gsap.to(".loader img", {
+          opacity: 0,
+        });
+      },
+    });
+  } else {
+    gsap.to(".loader img", {
+      opacity: 1,
+      width: "30%",
+      duration: 4.5,
+      onComplete: () => {
+        gsap.to(".loader img", {
+          opacity: 0,
+        });
+      },
+    });
+  }
+
   setTimeout(() => {
     const loader = document.querySelector(".loader");
     document.fonts.ready.then(function () {
@@ -58,6 +72,55 @@ function loader() {
 }
 
 loader();
+
+function menu() {
+  var mbox = document.querySelector(".menubox");
+  var on = document.querySelector(".ri-camera-line");
+  var off = document.querySelector(".ri-camera-off-line");
+  var toggle = 0;
+  var mbtn = document.querySelector(".menubtn");
+
+  mbtn.addEventListener("click", function () {
+    if (toggle === 0) {
+      gsap.to(mbox, {
+        display: "flex",
+        height: "100vh",
+        onUpdate: () => {
+          on.style.display = "none";
+          off.style.display = "flex";
+        },
+      });
+      gsap.to(".linkbox a", {
+        delay: 0.3,
+        opacity: 1,
+        marginRight: "0vmax",
+        stagger: 0.1,
+      });
+      toggle = 1;
+    } else {
+      gsap.to(mbox, {
+        delay: 0.7,
+        height: "0vh",
+        bottom: "100%",
+        duration: 0.5,
+        onUpdate: () => {
+          off.style.display = "none";
+          on.style.display = "flex";
+        },
+        onComplete: function () {
+          mbox.style.bottom = "0%";
+        },
+      });
+      gsap.to(".linkbox a", {
+        opacity: 0,
+        marginRight: "10vmax",
+        stagger: 0.1,
+      });
+      toggle = 0;
+    }
+  });
+}
+menu();
 
 function sec1() {
   const heading = document.querySelector(".sec1 h1");
