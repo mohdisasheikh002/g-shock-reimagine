@@ -658,12 +658,8 @@ body {
   flex-direction: column;
   justify-content: center;
 }
-.wrapper .cr4 .textbox h1 {
-  font-size: 12vmax;
-  color: #121212;
-  font-family: "PPU";
-  font-weight: 500;
-  line-height: 8vmax;
+.wrapper .cr4 .textbox h4 {
+  color: #fff;
 }
 @media (max-width: 30cm) {
   .wrapper .sec3 h1 {
