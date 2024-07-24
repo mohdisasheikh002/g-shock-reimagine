@@ -103,7 +103,6 @@ body {
   border-radius: 50%;
   cursor: pointer;
   overflow: hidden;
-  pointer-events: none;
 }
 .nav .right .icon::after {
   content: "";
@@ -209,7 +208,7 @@ body {
   display: none;
   align-items: center;
   justify-content: center;
-  background: #000;
+  background: rgba(0, 0, 0, 0.8862745098);
   padding: 0 4vmax;
   z-index: 9;
   transition: all cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -222,6 +221,7 @@ body {
   text-align: center;
 }
 .menubox .linkbox a {
+  font-family: "PPU";
   font-size: 7vmax;
   line-height: 7.5vmax;
   text-decoration: none;
@@ -232,8 +232,8 @@ body {
 
 @media (max-width: 30cm) {
   .menubox .linkbox a {
-    font-size: 9vmax;
-    line-height: 9.5vmax;
+    font-size: 7vmax;
+    line-height: 8vmax;
     text-align: center;
   }
 }
@@ -472,7 +472,6 @@ body {
 .wrapper .sec2 .featuredbox .left p {
   line-height: 1.8vmax;
   margin-top: 1.5vmax;
-  opacity: 0.6;
   width: 95%;
   color: #000;
   font-weight: 600;
@@ -1040,9 +1039,9 @@ body {
     gap: 1.2vmax;
   }
   .wrapper .footer .elem1 .sociallinkbox i {
-    height: 4.6vmax;
-    width: 4.6vmax;
-    font-size: 2.2vmax;
+    height: 4.4vmax;
+    width: 4.4vmax;
+    font-size: 2vmax;
   }
   .wrapper .footer .elem2 {
     height: -moz-fit-content;

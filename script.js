@@ -33,7 +33,7 @@ function locomotive() {
 locomotive();
 
 function loader() {
-  if (window.screen.width > 850) {
+  if (window.screen.width < 850) {
     gsap.to(".loader img", {
       opacity: 1,
       width: "50%",
@@ -85,10 +85,6 @@ function menu() {
       gsap.to(mbox, {
         display: "flex",
         height: "100vh",
-        onUpdate: () => {
-          on.style.display = "none";
-          off.style.display = "flex";
-        },
       });
       gsap.to(".linkbox a", {
         delay: 0.3,
@@ -103,10 +99,6 @@ function menu() {
         height: "0vh",
         bottom: "100%",
         duration: 0.5,
-        onUpdate: () => {
-          off.style.display = "none";
-          on.style.display = "flex";
-        },
         onComplete: function () {
           mbox.style.bottom = "0%";
         },
@@ -204,54 +196,41 @@ function sec2() {
     const ib2 = document.querySelector(".ib2");
     const leftH2 = document.querySelector(".left .fs2");
     const leftP = document.querySelector(".left .fs5");
-    const leftButton = document.querySelector(".left button");
 
     const animateContent = (newTitle, newDescription) => {
-      // Create a timeline for the exit and entry animations
       const tl = gsap.timeline();
-
-      // Animate out the current content
-      tl.to([leftH2, leftP, leftButton], {
-        y: 50,
+      tl.to([leftH2, leftP], {
+        y: 20,
         opacity: 0,
-        duration: 0.1,
+        duration: 0.3,
         stagger: 0.1,
       });
-
-      // Update content
       tl.add(() => {
         leftH2.textContent = newTitle;
         leftP.textContent = newDescription;
       });
-
-      // Animate in the new content
       tl.fromTo(
         leftH2,
-        { y: -50, opacity: 0 },
-        { y: 0, opacity: 1, duration: 1 }
+        { y: 20, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.2 }
       );
       tl.fromTo(
         leftP,
-        { y: -50, opacity: 0 },
-        { y: 0, opacity: 1, duration: 1, delay: 0.2 }
-      );
-      tl.fromTo(
-        leftButton,
-        { y: -50, opacity: 0 },
-        { y: 0, opacity: 1, duration: 1, delay: 0.4 }
+        { y: 20, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.2, delay: 0.1 }
       );
     };
 
     ib1.addEventListener("click", () =>
       animateContent(
         "Black G - Land Rangeman",
-        "Designed to work even in the harshest environments, the RANGEMAN GPR-H1000 from the MASTER of G line is a truly tough piece of outdoor gear."
+        "The Black G - Land Rangeman seamlessly blends stealth with durability, featuring a sleek yet rugged design built to excel in the harshest and most extreme conditions."
       )
     );
     ib2.addEventListener("click", () =>
       animateContent(
         "Yellow G - Land Rangeman",
-        "The Yellow G - Land Rangeman brings vibrant style and tough features for outdoor adventurers."
+        "The Yellow G - Land Rangeman features vibrant visibility and rugged durability, perfect for adventurous spirits seeking reliable performance"
       )
     );
   });
@@ -433,11 +412,11 @@ function sec3() {
   gsap.from(".cr4 .textbox h4", {
     scrollTrigger: {
       trigger: ".cr4",
-      start: `top 50%`,
+      start: `top 95%`,
       scroller: ".wrapper",
       scrub: true,
     },
-    y: 50,
+    y: 30,
     opacity: 0,
     stagger: 0.1,
   });
