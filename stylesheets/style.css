@@ -716,6 +716,9 @@ body {
   .wrapper .sec4 {
     min-height: 120vh;
   }
+  .wrapper .sec4 .marquee-box .text-holder h1 {
+    min-width: 109vmax;
+  }
   .wrapper .sec4 .watches {
     height: 92.5%;
     width: 220%;
@@ -727,13 +730,19 @@ body {
   .wrapper .sec4 .watches .watch {
     width: 100%;
   }
+  .wrapper .sec4 .watches .watch .detail {
+    width: 150%;
+    height: 8%;
+  }
   .wrapper .sec4 .watches .watch img {
     transform: translateY(0%);
   }
   .wrapper .sec4 .watches .watch:nth-child(1) {
+    width: 105%;
     transform: translateY(-15vmax);
   }
   .wrapper .sec4 .watches .watch:nth-child(2) {
+    width: 105%;
     transform: translateY(-13.9vmax);
   }
   .wrapper .sec4 .watches .watch:nth-child(3) {
@@ -743,6 +752,7 @@ body {
     transform: translateY(-13.5vmax);
   }
   .wrapper .sec4 .watches .watch:nth-child(5) {
+    width: 105%;
     transform: translateY(-13.5vmax);
   }
   .wrapper .sec4 .watches .watch:nth-child(5) {
@@ -760,6 +770,7 @@ body {
   justify-content: center;
   position: relative;
   background-color: #000;
+  overflow: hidden;
 }
 .wrapper .sec5 video {
   width: 100%;
@@ -789,6 +800,19 @@ body {
   text-align: center;
   transform: translateX(-50%);
   line-height: 1.2vmax;
+}
+@media (max-width: 30cm) {
+  .wrapper .sec5 h1 {
+    font-size: 6vmax;
+    transform: rotate(-90deg);
+    word-spacing: 35vmax;
+    white-space: nowrap;
+  }
+  .wrapper .sec5 p {
+    bottom: 2.5vmax;
+    width: 100%;
+    line-height: 2.5vmax;
+  }
 }
 .wrapper .footer {
   height: -moz-fit-content;
@@ -951,7 +975,9 @@ body {
     margin-top: 5vmax;
   }
   .wrapper .footer .elem1 .sociallinkbox i {
-    padding: 1vmax;
+    height: 4.2vmax;
+    width: 4.2vmax;
+    font-size: 1.8vmax;
   }
   .wrapper .footer .elem2 {
     height: -moz-fit-content;
@@ -966,6 +992,7 @@ body {
   }
   .wrapper .footer .elem2 .linkbox {
     gap: 2.5vmax;
+    display: none;
   }
 }
 @media (max-width: 15cm) {

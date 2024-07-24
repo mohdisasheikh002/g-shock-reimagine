@@ -123,7 +123,7 @@ function sec1() {
       document.querySelector(".minicircle").style.boxShadow = "none";
     });
 }
-// sec1();
+sec1();
 
 function sec2() {
   var sb = document.querySelector(".sec2 .sliderbox");
@@ -322,7 +322,7 @@ function sec3() {
   });
 }
 
-// sec3();
+sec3();
 
 function sec4() {
   gsap.to(".st", {
@@ -355,7 +355,7 @@ function sec5() {
       "jklm"
     )
     .to(
-      ".reeltext",
+      ".reeltext",  
       {
         wordSpacing: "0vmax",
       },

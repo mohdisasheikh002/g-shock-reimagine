@@ -814,6 +814,14 @@ body {
     .sec4 {
       min-height: 120vh;
 
+      .marquee-box {
+        .text-holder {
+          h1 {
+            min-width: 109vmax;
+          }
+        }
+      }
+
       .watches {
         height: 92.5%;
         width: 220%;
@@ -825,15 +833,22 @@ body {
         .watch {
           width: 100%;
 
+          .detail {
+            width: 150%;
+            height: 8%;
+          }
+
           img {
             transform: translateY(0%);
           }
 
           &:nth-child(1) {
+            width: 105%;
             transform: translateY(-15vmax);
           }
 
           &:nth-child(2) {
+            width: 105%;
             transform: translateY(-13.9vmax);
           }
 
@@ -846,6 +861,7 @@ body {
           }
 
           &:nth-child(5) {
+            width: 105%;
             transform: translateY(-13.5vmax);
           }
 
@@ -869,6 +885,7 @@ body {
     justify-content: center;
     position: relative;
     background-color: #000;
+    overflow: hidden;
 
     video {
       width: 100%;
@@ -899,6 +916,23 @@ body {
       text-align: center;
       transform: translateX(-50%);
       line-height: 1.2vmax;
+    }
+  }
+
+  @media (max-width: 30cm) {
+    .sec5 {
+      h1 {
+        font-size: 6vmax;
+        transform: rotate(-90deg);
+        word-spacing: 35vmax;
+        white-space: nowrap;
+      }
+
+      p {
+        bottom: 2.5vmax;
+        width: 100%;
+        line-height: 2.5vmax;
+      }
     }
   }
 
@@ -1073,7 +1107,9 @@ body {
           margin-top: 5vmax;
 
           i {
-            padding: 1vmax;
+            height: 4.2vmax;
+            width: 4.2vmax;
+            font-size: 1.8vmax;
           }
         }
       }
@@ -1093,6 +1129,7 @@ body {
 
         .linkbox {
           gap: 2.5vmax;
+          display: none;
         }
       }
     }
