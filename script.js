@@ -33,21 +33,31 @@ function locomotive() {
 locomotive();
 
 function loader() {
+  gsap.to(".loader img", {
+    opacity: 1,
+    width: "30%",
+    duration: 5,
+    onComplete: () => {
+      gsap.to(".loader img", {
+        opacity: 0,
+      });
+    },
+  });
   setTimeout(() => {
     const loader = document.querySelector(".loader");
     document.fonts.ready.then(function () {
       gsap.to(loader, {
         height: "0vh",
         onComplete: () => {
-          loader.style.display = none;
           loader.style.zIndex = "-1";
+          loader.style.display = "none";
         },
       });
     });
-  }, 2000);
+  }, 5500);
 }
 
-// loader();
+loader();
 
 function sec1() {
   const heading = document.querySelector(".sec1 h1");
@@ -126,28 +136,64 @@ function sec1() {
 sec1();
 
 function sec2() {
-  var sb = document.querySelector(".sec2 .sliderbox");
-  var mf = document.querySelector(".sec2 .sliderbox .clickFollower");
-  sb.addEventListener("mouseenter", function () {
-    gsap.to(mf, {
-      scale: 1,
-      opacity: 1,
-    });
-  });
-  sb.addEventListener("mouseleave", function () {
-    gsap.to(mf, {
-      scale: 0,
-      opacity: 0,
-    });
-  });
-  sb.addEventListener("mousemove", function (dets) {
-    gsap.to(mf, {
-      left: dets.x - 760,
-      top: dets.y - 380,
-    });
+  document.addEventListener("DOMContentLoaded", () => {
+    const ib1 = document.querySelector(".ib1");
+    const ib2 = document.querySelector(".ib2");
+    const leftH2 = document.querySelector(".left .fs2");
+    const leftP = document.querySelector(".left .fs5");
+    const leftButton = document.querySelector(".left button");
+
+    const animateContent = (newTitle, newDescription) => {
+      // Create a timeline for the exit and entry animations
+      const tl = gsap.timeline();
+
+      // Animate out the current content
+      tl.to([leftH2, leftP, leftButton], {
+        y: 50,
+        opacity: 0,
+        duration: 0.1,
+        stagger: 0.1,
+      });
+
+      // Update content
+      tl.add(() => {
+        leftH2.textContent = newTitle;
+        leftP.textContent = newDescription;
+      });
+
+      // Animate in the new content
+      tl.fromTo(
+        leftH2,
+        { y: -50, opacity: 0 },
+        { y: 0, opacity: 1, duration: 1 }
+      );
+      tl.fromTo(
+        leftP,
+        { y: -50, opacity: 0 },
+        { y: 0, opacity: 1, duration: 1, delay: 0.2 }
+      );
+      tl.fromTo(
+        leftButton,
+        { y: -50, opacity: 0 },
+        { y: 0, opacity: 1, duration: 1, delay: 0.4 }
+      );
+    };
+
+    ib1.addEventListener("click", () =>
+      animateContent(
+        "Black G - Land Rangeman",
+        "Designed to work even in the harshest environments, the RANGEMAN GPR-H1000 from the MASTER of G line is a truly tough piece of outdoor gear."
+      )
+    );
+    ib2.addEventListener("click", () =>
+      animateContent(
+        "Yellow G - Land Rangeman",
+        "The Yellow G - Land Rangeman brings vibrant style and tough features for outdoor adventurers."
+      )
+    );
   });
 }
-// sec2();
+sec2();
 
 function sec3() {
   const heading = document.querySelector(".sec3 h1");
@@ -320,6 +366,18 @@ function sec3() {
     end: `400% top`,
     scroller: ".wrapper",
   });
+
+  gsap.from(".cr4 .textbox h4", {
+    scrollTrigger: {
+      trigger: ".cr4",
+      start: `top 50%`,
+      scroller: ".wrapper",
+      scrub: true,
+    },
+    y: 50,
+    opacity: 0,
+    stagger: 0.1,
+  });
 }
 
 sec3();
@@ -355,7 +413,7 @@ function sec5() {
       "jklm"
     )
     .to(
-      ".reeltext",  
+      ".reeltext",
       {
         wordSpacing: "0vmax",
       },

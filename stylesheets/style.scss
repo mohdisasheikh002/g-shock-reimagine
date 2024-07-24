@@ -21,8 +21,27 @@ body {
   left: 0;
   height: 100vh;
   width: 100%;
-  background-color: bisque;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
   z-index: 999;
+
+  video {
+    height: 130%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0%;
+    opacity: 0;
+    transition: 0.25s linear;
+  }
 }
 
 .nav {
@@ -387,8 +406,9 @@ body {
     position: relative;
     height: 100vh;
     width: 100%;
-    background-color: #fff;
+    background-color: #eba100;
     overflow: hidden;
+    transition: 0.25s linear;
 
     .circular {
       position: absolute;
@@ -413,8 +433,9 @@ body {
           font-family: "PPU";
           text-transform: uppercase;
           font-weight: 500;
-          color: #fff;
+          color: #eba100;
           letter-spacing: -0.05vmax;
+          transition: 0.25s linear;
         }
       }
 
@@ -435,7 +456,8 @@ body {
         border-radius: 50%;
         width: 21.5vmax;
         height: 21.5vmax;
-        background-color: #fff;
+        background-color: #eba100;
+        transition: 0.25s linear;
       }
     }
 
@@ -460,6 +482,7 @@ body {
           letter-spacing: normal;
           font-weight: 600;
           color: #000;
+          transition: 0.25s linear;
         }
 
         p {
@@ -469,6 +492,7 @@ body {
           width: 95%;
           color: #000;
           font-weight: 600;
+          transition: 0.25s linear;
         }
 
         button {
@@ -506,16 +530,12 @@ body {
         width: 55%;
 
         h1 {
-          position: absolute;
-          top: -25%;
-          left: -9.5%;
           font-size: 15vmax;
-          color: #fff;
+          color: #000;
           font-family: "PPU";
           font-weight: 500;
-          white-space: nowrap;
           z-index: 55;
-          mix-blend-mode: difference;
+          transform: translateX(-4.5vmax);
         }
 
         .imgboxholder {
@@ -560,6 +580,7 @@ body {
               transition: 0.25s linear;
               filter: contrast(1.1);
               z-index: 999;
+              pointer-events: none;
             }
 
             &:hover img {
@@ -714,6 +735,10 @@ body {
         width: 100%;
         text-align: center;
         padding: 0 2.5vmax;
+
+        h4 {
+          transition: 0.25s linear;
+        }
       }
     }
   }
@@ -813,14 +838,6 @@ body {
   @media (max-width: 30cm) {
     .sec4 {
       min-height: 120vh;
-
-      .marquee-box {
-        .text-holder {
-          h1 {
-            min-width: 109vmax;
-          }
-        }
-      }
 
       .watches {
         height: 92.5%;
@@ -940,7 +957,8 @@ body {
     height: fit-content;
     width: 100%;
     background-color: #000;
-    padding: 2.5vmax 3vmax;
+    padding: 0 3vmax;
+    padding-top: 10vmax;
     overflow: hidden;
 
     .elem1 {
@@ -1079,13 +1097,12 @@ body {
     }
 
     .elem3 {
+      height: fit-content;
       width: 100%;
-      margin-top: 2.5vmax;
 
       img {
-        height: 100%;
-        width: 100%;
-        mix-blend-mode: exclusion;
+        width: 101.5%;
+        object-position: center;
       }
     }
   }
@@ -1105,6 +1122,7 @@ body {
 
         .sociallinkbox {
           margin-top: 5vmax;
+          gap: 1.2vmax;
 
           i {
             height: 4.2vmax;
@@ -1146,6 +1164,10 @@ body {
 
       .elem2 {
         margin-top: 5vmax;
+      }
+
+      .elem3 {
+        margin-top: 2.5vmax;
       }
     }
   }
