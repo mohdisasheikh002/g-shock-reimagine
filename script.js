@@ -409,17 +409,30 @@ function sec3() {
     scroller: ".wrapper",
   });
 
-  gsap.from(".cr4 .textbox h4", {
-    scrollTrigger: {
-      trigger: ".cr4",
-      start: `top 95%`,
-      scroller: ".wrapper",
-      scrub: true,
-    },
-    y: 30,
-    opacity: 0,
-    stagger: 0.1,
-  });
+  if (window.screen.width < 850) {
+    gsap.from(".cr4 .textbox h4", {
+      scrollTrigger: {
+        trigger: ".cr4",
+        start: `top 95%`,
+        scroller: ".wrapper",
+      },
+      y: 40,
+      opacity: 0,
+      stagger: 0.1,
+    });
+  } else {
+    gsap.from(".cr4 .textbox h4", {
+      scrollTrigger: {
+        trigger: ".cr4",
+        start: `top 95%`,
+        scroller: ".wrapper",
+        scrub: true,
+      },
+      y: 30,
+      opacity: 0,
+      stagger: 0.1,
+    });
+  }
 }
 
 sec3();
