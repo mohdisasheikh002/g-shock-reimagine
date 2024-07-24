@@ -25,7 +25,7 @@ body {
 }
 
 .nav {
-  position: absolute;
+  position: fixed;
   top: 1vmax;
   left: 50%;
   transform: translateX(-50%);
@@ -194,7 +194,7 @@ body {
   background-color: #000;
   overflow: hidden;
 }
-.wrapper .sec1 h1 {
+.wrapper .sec1 .landscapeText {
   position: absolute;
   top: 37.7%;
   left: 50%;
@@ -207,9 +207,12 @@ body {
   font-family: "PPU";
   font-weight: 500;
 }
-.wrapper .sec1 h1 span {
+.wrapper .sec1 .landscapeText span {
   color: #202020;
   transition: 0.35s linear;
+}
+.wrapper .sec1 .potraitText {
+  display: none;
 }
 .wrapper .sec1 .heroImg {
   position: absolute;
@@ -238,7 +241,13 @@ body {
   gap: 2vmax;
 }
 .wrapper .sec1 .bottombox .linkbox h5 {
+  opacity: 0.4;
   cursor: pointer;
+  transition: 0.25s linear;
+}
+.wrapper .sec1 .bottombox .linkbox h5:hover {
+  opacity: 1;
+  transition: 0.25s linear;
 }
 .wrapper .sec1 .bottombox .circular {
   position: absolute;
@@ -279,26 +288,48 @@ body {
   background-color: #e72830;
 }
 @media (max-width: 30cm) {
-  .wrapper .sec1 h1 {
+  .wrapper .sec1 .landscapeText {
+    display: none;
+  }
+  .wrapper .sec1 .potraitText {
+    position: absolute;
+    top: 50%;
     left: 50%;
-    font-size: 15vmax;
-    line-height: 10.5vmax;
+    transform: translate(-50%, -50%);
+    font-size: 20vmax;
+    line-height: 8vmax;
+    font-family: "PPU";
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5vmax;
+  }
+  .wrapper .sec1 .potraitText span {
+    color: #202020;
+    transition: 0.35s linear;
   }
   .wrapper .sec1 .heroImg {
-    width: 200%;
+    width: 160%;
   }
   .wrapper .sec1 .bottombox {
     padding: 2.5vmax;
   }
   .wrapper .sec1 .bottombox .linkbox {
-    gap: 2.5vmax;
-    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    gap: 0;
+  }
+  .wrapper .sec1 .bottombox .linkbox h5 {
+    opacity: 0.4;
   }
   .wrapper .sec1 .bottombox .circular {
     width: 12vmax;
     height: 12vmax;
     bottom: 2.5vmax;
     right: 2.5vmax;
+    display: none;
   }
   .wrapper .sec1 .bottombox .circular svg text {
     word-spacing: 0.2vmax;
@@ -308,7 +339,7 @@ body {
   position: relative;
   height: 100vh;
   width: 100%;
-  background-color: #eba100;
+  background-color: #fff;
   overflow: hidden;
 }
 .wrapper .sec2 .circular {
@@ -334,7 +365,7 @@ body {
   font-family: "PPU";
   text-transform: uppercase;
   font-weight: 500;
-  color: #eba100;
+  color: #fff;
   letter-spacing: -0.05vmax;
 }
 @keyframes rotateAnimation {
@@ -353,7 +384,7 @@ body {
   border-radius: 50%;
   width: 21.5vmax;
   height: 21.5vmax;
-  background-color: #eba100;
+  background-color: #fff;
 }
 .wrapper .sec2 .featuredbox {
   position: absolute;
@@ -417,13 +448,15 @@ body {
 }
 .wrapper .sec2 .featuredbox .right h1 {
   position: absolute;
-  top: -37%;
-  left: -10%;
-  font-size: 20vmax;
-  color: #121212;
+  top: -25%;
+  left: -9.5%;
+  font-size: 15vmax;
+  color: #fff;
   font-family: "PPU";
   font-weight: 500;
   white-space: nowrap;
+  z-index: 55;
+  mix-blend-mode: difference;
 }
 .wrapper .sec2 .featuredbox .right .imgboxholder {
   position: relative;
@@ -453,7 +486,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.8588235294);
+  background-color: #000;
   cursor: pointer;
   overflow: hidden;
   border-radius: 1vmax;
@@ -467,6 +500,7 @@ body {
      object-position: center;
   transition: 0.25s linear;
   filter: contrast(1.1);
+  z-index: 999;
 }
 .wrapper .sec2 .featuredbox .right .imgboxholder .imgbox:hover img {
   transform: scale(1.1);
@@ -481,14 +515,8 @@ body {
     transform: translate(-50%, -50%);
   }
   .wrapper .sec2 .circular .minicircle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
     width: 28vmax;
     height: 28vmax;
-    background-color: #eba100;
   }
   .wrapper .sec2 .featuredbox {
     flex-direction: column;
@@ -518,7 +546,7 @@ body {
     width: 100%;
   }
   .wrapper .sec2 .featuredbox .right h1 {
-    top: 3%;
+    top: 2.5%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
@@ -538,6 +566,8 @@ body {
   text-align: center;
   font-family: "PPU";
   font-weight: 500;
+  width: 100%;
+  overflow: hidden;
 }
 .wrapper .sec3 h1 span {
   color: #202020;
@@ -558,6 +588,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: flex-end;
+  overflow: hidden;
 }
 .wrapper .cr4 .textbox {
   height: 100vh;
@@ -572,6 +603,30 @@ body {
   font-family: "PPU";
   font-weight: 500;
   line-height: 8vmax;
+}
+@media (max-width: 30cm) {
+  .wrapper .sec3 h1 {
+    font-size: 20vmax;
+    line-height: 8vmax;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5vmax;
+  }
+  .wrapper .sec3 h1 span {
+    display: block;
+  }
+  .wrapper .cr4 {
+    justify-content: flex-start;
+    background-color: #000;
+  }
+  .wrapper .cr4 .textbox {
+    width: 100%;
+    text-align: center;
+    padding: 0 2.5vmax;
+  }
 }
 .wrapper .sec4 {
   height: 100vh;
@@ -592,16 +647,16 @@ body {
   width: 100%;
   display: flex;
   flex: 0 0 auto;
-  background-color: #000;
   padding-bottom: 1vmax;
-  border-top: 2px solid #fff;
+  border-bottom: 2px solid #000;
 }
 .wrapper .sec4 .marquee-box .text-holder h1 {
   font-size: 8vmax;
   font-family: "PPU";
-  letter-spacing: 0.2vmax;
+  letter-spacing: normal;
   white-space: nowrap;
-  min-width: 115vmax;
+  min-width: 111vmax;
+  color: #000;
 }
 .wrapper .sec4 .marquee-box::-webkit-scrollbar {
   display: none;

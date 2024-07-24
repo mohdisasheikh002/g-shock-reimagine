@@ -81,43 +81,23 @@ function sec1() {
     },
   });
 
-  if (window.screen.width < 850) {
-    tl1
-      .to(
-        ".heroImg",
-        {
-          height: "80%",
-          top: "41%",
-          rotate: "0deg",
-        },
-        "abcd"
-      )
-      .to(
-        ".sec1 h1",
-        {
-          top: "41%",
-        },
-        "abcd"
-      );
-  } else {
-    tl1
-      .to(
-        ".heroImg",
-        {
-          height: "80%",
-          top: "50%",
-          rotate: "0deg",
-        },
-        "abcd"
-      )
-      .to(
-        ".sec1 h1",
-        {
-          top: "50%",
-        },
-        "abcd"
-      );
-  }
+  tl1
+    .to(
+      ".heroImg",
+      {
+        height: "80%",
+        top: "50%",
+        rotate: "0deg",
+      },
+      "abcd"
+    )
+    .to(
+      ".sec1 .landscapeText",
+      {
+        top: "50%",
+      },
+      "abcd"
+    );
 
   document
     .querySelector(".circular")

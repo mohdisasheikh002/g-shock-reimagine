@@ -26,7 +26,7 @@ body {
 }
 
 .nav {
-  position: absolute;
+  position: fixed;
   top: 1vmax;
   left: 50%;
   transform: translateX(-50%);
@@ -216,7 +216,7 @@ body {
     background-color: #000;
     overflow: hidden;
 
-    h1 {
+    .landscapeText {
       position: absolute;
       top: 37.7%;
       left: 50%;
@@ -233,6 +233,10 @@ body {
         color: #202020;
         transition: 0.35s linear;
       }
+    }
+
+    .potraitText {
+      display: none;
     }
 
     .heroImg {
@@ -262,7 +266,14 @@ body {
         gap: 2vmax;
 
         h5 {
+          opacity: 0.4;
           cursor: pointer;
+          transition: 0.25s linear;
+
+          &:hover {
+            opacity: 1;
+            transition: 0.25s linear;
+          }
         }
       }
 
@@ -313,22 +324,46 @@ body {
 
   @media (max-width: 30cm) {
     .sec1 {
-      h1 {
+      .landscapeText {
+        display: none;
+      }
+
+      .potraitText {
+        position: absolute;
+        top: 50%;
         left: 50%;
-        font-size: 15vmax;
-        line-height: 10.5vmax;
+        transform: translate(-50%, -50%);
+        font-size: 20vmax;
+        line-height: 8vmax;
+        font-family: "PPU";
+        font-weight: 500;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5vmax;
+
+        span {
+          color: #202020;
+          transition: 0.35s linear;
+        }
       }
 
       .heroImg {
-        width: 200%;
+        width: 160%;
       }
 
       .bottombox {
         padding: 2.5vmax;
 
         .linkbox {
-          gap: 2.5vmax;
-          flex-direction: column;
+          width: 100%;
+          justify-content: space-between;
+          gap: 0;
+
+          h5 {
+            opacity: 0.4;
+          }
         }
 
         .circular {
@@ -336,6 +371,7 @@ body {
           height: 12vmax;
           bottom: 2.5vmax;
           right: 2.5vmax;
+          display: none;
 
           svg {
             text {
@@ -351,7 +387,7 @@ body {
     position: relative;
     height: 100vh;
     width: 100%;
-    background-color: #eba100;
+    background-color: #fff;
     overflow: hidden;
 
     .circular {
@@ -377,7 +413,7 @@ body {
           font-family: "PPU";
           text-transform: uppercase;
           font-weight: 500;
-          color: #eba100;
+          color: #fff;
           letter-spacing: -0.05vmax;
         }
       }
@@ -399,7 +435,7 @@ body {
         border-radius: 50%;
         width: 21.5vmax;
         height: 21.5vmax;
-        background-color: #eba100;
+        background-color: #fff;
       }
     }
 
@@ -471,13 +507,15 @@ body {
 
         h1 {
           position: absolute;
-          top: -37%;
-          left: -10%;
-          font-size: 20vmax;
-          color: #121212;
+          top: -25%;
+          left: -9.5%;
+          font-size: 15vmax;
+          color: #fff;
           font-family: "PPU";
           font-weight: 500;
           white-space: nowrap;
+          z-index: 55;
+          mix-blend-mode: difference;
         }
 
         .imgboxholder {
@@ -509,7 +547,7 @@ body {
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: #000000db;
+            background-color: #000;
             cursor: pointer;
             overflow: hidden;
             border-radius: 1vmax;
@@ -521,6 +559,7 @@ body {
               object-position: center;
               transition: 0.25s linear;
               filter: contrast(1.1);
+              z-index: 999;
             }
 
             &:hover img {
@@ -543,14 +582,8 @@ body {
         transform: translate(-50%, -50%);
 
         .minicircle {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          border-radius: 50%;
           width: 28vmax;
           height: 28vmax;
-          background-color: #eba100;
         }
       }
 
@@ -586,7 +619,7 @@ body {
           width: 100%;
 
           h1 {
-            top: 3%;
+            top: 2.5%;
             left: 50%;
             transform: translate(-50%, -50%);
           }
@@ -610,6 +643,8 @@ body {
       text-align: center;
       font-family: "PPU";
       font-weight: 500;
+      width: 100%;
+      overflow: hidden;
 
       span {
         color: #202020;
@@ -632,6 +667,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: flex-end;
+    overflow: hidden;
   }
 
   .cr4 {
@@ -648,6 +684,36 @@ body {
         font-family: "PPU";
         font-weight: 500;
         line-height: 8vmax;
+      }
+    }
+  }
+
+  @media (max-width: 30cm) {
+    .sec3 {
+      h1 {
+        font-size: 20vmax;
+        line-height: 8vmax;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5vmax;
+
+        span {
+          display: block;
+        }
+      }
+    }
+
+    .cr4 {
+      justify-content: flex-start;
+      background-color: #000;
+
+      .textbox {
+        width: 100%;
+        text-align: center;
+        padding: 0 2.5vmax;
       }
     }
   }
@@ -669,16 +735,16 @@ body {
         width: 100%;
         display: flex;
         flex: 0 0 auto;
-        background-color: #000;
         padding-bottom: 1vmax;
-        border-top: 2px solid #fff;
+        border-bottom: 2px solid #000;
 
         h1 {
           font-size: 8vmax;
           font-family: "PPU";
-          letter-spacing: 0.2vmax;
+          letter-spacing: normal;
           white-space: nowrap;
-          min-width: 115vmax;
+          min-width: 111vmax;
+          color: #000;
         }
       }
 
