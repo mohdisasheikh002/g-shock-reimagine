@@ -237,7 +237,7 @@ body {
   display: flex;
   gap: 2vmax;
 }
-.wrapper .sec1 .bottombox .linkbox h6 {
+.wrapper .sec1 .bottombox .linkbox h5 {
   cursor: pointer;
 }
 .wrapper .sec1 .bottombox .circular {
@@ -280,7 +280,7 @@ body {
 }
 @media (max-width: 30cm) {
   .wrapper .sec1 h1 {
-    left: 46%;
+    left: 50%;
     font-size: 15vmax;
     line-height: 10.5vmax;
   }
@@ -309,14 +309,13 @@ body {
   height: 100vh;
   width: 100%;
   background-color: #eba100;
-  display: flex;
-  align-items: center;
   overflow: hidden;
 }
 .wrapper .sec2 .circular {
   position: absolute;
-  top: -38%;
-  left: -18%;
+  top: 0%;
+  left: 0%;
+  transform: translate(-50%, -50%);
   bottom: 2.5vmax;
   right: 5vmax;
   border-radius: 50%;
@@ -375,7 +374,6 @@ body {
 .wrapper .sec2 .featuredbox .left h2 {
   line-height: 4.5vmax;
   letter-spacing: normal;
-  text-transform: capitalize;
   font-weight: 600;
   color: #000;
 }
@@ -473,6 +471,57 @@ body {
 .wrapper .sec2 .featuredbox .right .imgboxholder .imgbox:hover img {
   transform: scale(1.1);
   transition: 0.25s linear;
+}
+@media (max-width: 30cm) {
+  .wrapper .sec2 .circular {
+    height: 45vmax;
+    width: 45vmax;
+    left: 0;
+    top: 0;
+    transform: translate(-50%, -50%);
+  }
+  .wrapper .sec2 .circular .minicircle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    width: 28vmax;
+    height: 28vmax;
+    background-color: #eba100;
+  }
+  .wrapper .sec2 .featuredbox {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 5vmax 2.5vmax;
+    gap: 8.5vmax;
+  }
+  .wrapper .sec2 .featuredbox .left {
+    width: 100%;
+  }
+  .wrapper .sec2 .featuredbox .left h2 {
+    line-height: 6vmax;
+  }
+  .wrapper .sec2 .featuredbox .left p {
+    line-height: 2.8vmax;
+    margin-top: 2.5vmax;
+    opacity: 0.8;
+  }
+  .wrapper .sec2 .featuredbox .left button {
+    height: 5vmax;
+    width: 14vmax;
+    margin-top: 3vmax;
+    display: none;
+  }
+  .wrapper .sec2 .featuredbox .right {
+    width: 100%;
+  }
+  .wrapper .sec2 .featuredbox .right h1 {
+    top: 3%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 .wrapper .sec3 {
   position: relative;
@@ -639,4 +688,190 @@ body {
   text-align: center;
   transform: translateX(-50%);
   line-height: 1.2vmax;
+}
+.wrapper .footer {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  background-color: #000;
+  padding: 2.5vmax 3vmax;
+}
+.wrapper .footer .elem1 {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.wrapper .footer .elem1 .lbholder {
+  position: relative;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  gap: 12vmax;
+}
+.wrapper .footer .elem1 .lbholder .linkbox {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2vmax;
+}
+.wrapper .footer .elem1 .lbholder .linkbox .fs5 {
+  letter-spacing: 0.05vmax;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+}
+.wrapper .footer .elem1 .lbholder .linkbox .fs6 {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: #fff;
+  opacity: 0.5;
+  transition: all 0.25s linear;
+}
+.wrapper .footer .elem1 .lbholder .linkbox .fs6:hover {
+  opacity: 1;
+  transition: all 0.25s linear;
+}
+.wrapper .footer .elem1 .sociallinkbox {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  gap: 0.8vmax;
+}
+.wrapper .footer .elem1 .sociallinkbox i {
+  position: relative;
+  font-size: 1.2vmax;
+  height: 2.6vmax;
+  width: 2.6vmax;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #202020;
+  border-radius: 50%;
+  cursor: pointer;
+  overflow: hidden;
+  color: #fff;
+}
+.wrapper .footer .elem1 .sociallinkbox .icon::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transition: 0.25s linear;
+  background-color: #fff;
+}
+.wrapper .footer .elem1 .sociallinkbox .icon:hover::after {
+  top: -100%;
+  transition: 0.25s linear;
+}
+.wrapper .footer .elem2 {
+  height: 1vmax;
+  width: 100%;
+  margin-top: 6vmax;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.wrapper .footer .elem2 .infolinkbox {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  align-items: flex-end;
+}
+.wrapper .footer .elem2 .infolinkbox i {
+  margin-left: -0.3vmax;
+  color: #fff;
+}
+.wrapper .footer .elem2 .infolinkbox a {
+  text-decoration: none;
+  color: #fff;
+  padding-left: 0.3vmax;
+}
+.wrapper .footer .elem2 .infolinkbox p {
+  color: #fff;
+  text-transform: capitalize;
+  opacity: 0.5;
+  margin-left: 2vmax;
+}
+.wrapper .footer .elem2 .linkbox {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  gap: 2vmax;
+}
+.wrapper .footer .elem2 .linkbox a {
+  text-decoration: none;
+  color: #fff;
+  opacity: 0.5;
+  transition: all 0.25s linear;
+}
+.wrapper .footer .elem2 .linkbox a:hover {
+  opacity: 1;
+  transition: all 0.25s linear;
+}
+.wrapper .footer .elem3 {
+  width: 100%;
+  margin-top: 2.5vmax;
+}
+.wrapper .footer .elem3 img {
+  height: 100%;
+  width: 100%;
+  mix-blend-mode: exclusion;
+}
+@media (max-width: 30cm) {
+  .wrapper .footer {
+    padding: 2.3vmax 2.3vmax;
+    padding-top: 10vmax;
+  }
+  .wrapper .footer .elem1 {
+    flex-direction: column;
+  }
+  .wrapper .footer .elem1 .lbholder {
+    width: 100%;
+    gap: 10vmax;
+  }
+  .wrapper .footer .elem1 .sociallinkbox {
+    margin-top: 5vmax;
+  }
+  .wrapper .footer .elem1 .sociallinkbox i {
+    padding: 1vmax;
+  }
+  .wrapper .footer .elem2 {
+    height: -moz-fit-content;
+    height: fit-content;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 2.3vmax;
+  }
+  .wrapper .footer .elem2 .infolinkbox p {
+    margin-left: 2.5vmax;
+  }
+  .wrapper .footer .elem2 .linkbox {
+    gap: 2.5vmax;
+  }
+}
+@media (max-width: 15cm) {
+  .wrapper .footer .elem1 .lbholder {
+    gap: 5vmax;
+    flex-direction: column;
+  }
+  .wrapper .footer .elem2 {
+    margin-top: 5vmax;
+  }
 }/*# sourceMappingURL=style.css.map */

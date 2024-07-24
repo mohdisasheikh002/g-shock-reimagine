@@ -54,13 +54,25 @@
 }
 
 @media (max-width: 30cm) {
+  .fs2 {
+    font-size: 6vmax;
+  }
+
+  .fs3 {
+    font-size: 6vmax;
+  }
+
+  .fs4 {
+    font-size: 4vmax;
+  }
+
   .fs5 {
     font-size: 1.8vmax;
-    letter-spacing: 0.07vmax;
+    letter-spacing: 0.05vmax;
   }
 
   .fs6 {
     font-size: 1.5vmax;
-    letter-spacing: 0.07vmax;
+    letter-spacing: 0.05vmax;
   }
 }

@@ -261,7 +261,7 @@ body {
         display: flex;
         gap: 2vmax;
 
-        h6 {
+        h5 {
           cursor: pointer;
         }
       }
@@ -314,7 +314,7 @@ body {
   @media (max-width: 30cm) {
     .sec1 {
       h1 {
-        left: 46%;
+        left: 50%;
         font-size: 15vmax;
         line-height: 10.5vmax;
       }
@@ -352,14 +352,13 @@ body {
     height: 100vh;
     width: 100%;
     background-color: #eba100;
-    display: flex;
-    align-items: center;
     overflow: hidden;
 
     .circular {
       position: absolute;
-      top: -38%;
-      left: -18%;
+      top: 0%;
+      left: 0%;
+      transform: translate(-50%, -50%);
       bottom: 2.5vmax;
       right: 5vmax;
       border-radius: 50%;
@@ -423,7 +422,6 @@ body {
         h2 {
           line-height: 4.5vmax;
           letter-spacing: normal;
-          text-transform: capitalize;
           font-weight: 600;
           color: #000;
         }
@@ -537,6 +535,63 @@ body {
 
   @media (max-width: 30cm) {
     .sec2 {
+      .circular {
+        height: 45vmax;
+        width: 45vmax;
+        left: 0;
+        top: 0;
+        transform: translate(-50%, -50%);
+
+        .minicircle {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          border-radius: 50%;
+          width: 28vmax;
+          height: 28vmax;
+          background-color: #eba100;
+        }
+      }
+
+      .featuredbox {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+        padding: 5vmax 2.5vmax;
+        gap: 8.5vmax;
+
+        .left {
+          width: 100%;
+
+          h2 {
+            line-height: 6vmax;
+          }
+
+          p {
+            line-height: 2.8vmax;
+            margin-top: 2.5vmax;
+            opacity: 0.8;
+          }
+
+          button {
+            height: 5vmax;
+            width: 14vmax;
+            margin-top: 3vmax;
+            display: none;
+          }
+        }
+
+        .right {
+          width: 100%;
+
+          h1 {
+            top: 3%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
     }
   }
 
@@ -720,6 +775,216 @@ body {
       text-align: center;
       transform: translateX(-50%);
       line-height: 1.2vmax;
+    }
+  }
+
+  .footer {
+    height: fit-content;
+    width: 100%;
+    background-color: #000;
+    padding: 2.5vmax 3vmax;
+
+    .elem1 {
+      height: fit-content;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      .lbholder {
+        position: relative;
+        height: fit-content;
+        width: fit-content;
+        display: flex;
+        gap: 12vmax;
+
+        .linkbox {
+          height: fit-content;
+          width: fit-content;
+          display: flex;
+          flex-direction: column;
+          gap: 1.2vmax;
+
+          .fs5 {
+            letter-spacing: 0.05vmax;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: #fff;
+            font-weight: 500;
+          }
+
+          .fs6 {
+            text-decoration: none;
+            text-transform: capitalize;
+            color: #fff;
+            opacity: 0.5;
+            transition: all 0.25s linear;
+
+            &:hover {
+              opacity: 1;
+              transition: all 0.25s linear;
+            }
+          }
+        }
+      }
+
+      .sociallinkbox {
+        height: fit-content;
+        width: fit-content;
+        display: flex;
+        gap: 0.8vmax;
+
+        i {
+          position: relative;
+          font-size: 1.2vmax;
+          height: 2.6vmax;
+          width: 2.6vmax;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #202020;
+          border-radius: 50%;
+          cursor: pointer;
+          overflow: hidden;
+          color: #fff;
+        }
+
+        .icon::after {
+          content: "";
+          position: absolute;
+          top: 100%;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          transition: 0.25s linear;
+          background-color: #fff;
+        }
+
+        .icon:hover::after {
+          top: -100%;
+          transition: 0.25s linear;
+        }
+      }
+    }
+
+    .elem2 {
+      height: 1vmax;
+      width: 100%;
+      margin-top: 6vmax;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+
+      .infolinkbox {
+        height: fit-content;
+        width: fit-content;
+        display: flex;
+        align-items: flex-end;
+
+        i {
+          margin-left: -0.3vmax;
+          color: #fff;
+        }
+
+        a {
+          text-decoration: none;
+          color: #fff;
+          padding-left: 0.3vmax;
+        }
+
+        p {
+          color: #fff;
+          text-transform: capitalize;
+          opacity: 0.5;
+          margin-left: 2vmax;
+        }
+      }
+
+      .linkbox {
+        height: fit-content;
+        width: fit-content;
+        display: flex;
+        gap: 2vmax;
+
+        a {
+          text-decoration: none;
+          color: #fff;
+          opacity: 0.5;
+          transition: all 0.25s linear;
+
+          &:hover {
+            opacity: 1;
+            transition: all 0.25s linear;
+          }
+        }
+      }
+    }
+
+    .elem3 {
+      width: 100%;
+      margin-top: 2.5vmax;
+
+      img {
+        height: 100%;
+        width: 100%;
+        mix-blend-mode: exclusion;
+      }
+    }
+  }
+
+  @media (max-width: 30cm) {
+    .footer {
+      padding: 2.3vmax 2.3vmax;
+      padding-top: 10vmax;
+
+      .elem1 {
+        flex-direction: column;
+
+        .lbholder {
+          width: 100%;
+          gap: 10vmax;
+        }
+
+        .sociallinkbox {
+          margin-top: 5vmax;
+
+          i {
+            padding: 1vmax;
+          }
+        }
+      }
+
+      .elem2 {
+        height: fit-content;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+        gap: 2.3vmax;
+
+        .infolinkbox {
+          p {
+            margin-left: 2.5vmax;
+          }
+        }
+
+        .linkbox {
+          gap: 2.5vmax;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 15cm) {
+    .footer {
+      .elem1 {
+        .lbholder {
+          gap: 5vmax;
+          flex-direction: column;
+        }
+      }
+
+      .elem2 {
+        margin-top: 5vmax;
+      }
     }
   }
 }
