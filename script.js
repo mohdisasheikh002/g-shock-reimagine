@@ -123,7 +123,7 @@ function sec1() {
       document.querySelector(".minicircle").style.boxShadow = "none";
     });
 }
-sec1();
+// sec1();
 
 function sec2() {
   var sb = document.querySelector(".sec2 .sliderbox");
@@ -185,76 +185,76 @@ function sec3() {
 
   function files(index) {
     var data = `
-    ./assets/canvas/Frames/scene00004.png
-    ./assets/canvas/Frames/scene00005.png
-    ./assets/canvas/Frames/scene00006.png
-    ./assets/canvas/Frames/scene00007.png
-    ./assets/canvas/Frames/scene00008.png
-    ./assets/canvas/Frames/scene00009.png
-    ./assets/canvas/Frames/scene00010.png
-    ./assets/canvas/Frames/scene00011.png
-    ./assets/canvas/Frames/scene00012.png
-    ./assets/canvas/Frames/scene00013.png
-    ./assets/canvas/Frames/scene00014.png
-    ./assets/canvas/Frames/scene00015.png
-    ./assets/canvas/Frames/scene00016.png
-    ./assets/canvas/Frames/scene00017.png
-    ./assets/canvas/Frames/scene00018.png
-    ./assets/canvas/Frames/scene00019.png
-    ./assets/canvas/Frames/scene00020.png
-    ./assets/canvas/Frames/scene00021.png
-    ./assets/canvas/Frames/scene00022.png
-    ./assets/canvas/Frames/scene00023.png
-    ./assets/canvas/Frames/scene00024.png
-    ./assets/canvas/Frames/scene00025.png
-    ./assets/canvas/Frames/scene00026.png
-    ./assets/canvas/Frames/scene00027.png
-    ./assets/canvas/Frames/scene00028.png
-    ./assets/canvas/Frames/scene00029.png
-    ./assets/canvas/Frames/scene00030.png
-    ./assets/canvas/Frames/scene00031.png
-    ./assets/canvas/Frames/scene00032.png
-    ./assets/canvas/Frames/scene00033.png
-    ./assets/canvas/Frames/scene00034.png
-    ./assets/canvas/Frames/scene00035.png
-    ./assets/canvas/Frames/scene00036.png
-    ./assets/canvas/Frames/scene00037.png
-    ./assets/canvas/Frames/scene00038.png
-    ./assets/canvas/Frames/scene00039.png
-    ./assets/canvas/Frames/scene00040.png
-    ./assets/canvas/Frames/scene00041.png
-    ./assets/canvas/Frames/scene00042.png
-    ./assets/canvas/Frames/scene00043.png
-    ./assets/canvas/Frames/scene00044.png
-    ./assets/canvas/Frames/scene00045.png
-    ./assets/canvas/Frames/scene00046.png
-    ./assets/canvas/Frames/scene00047.png
-    ./assets/canvas/Frames/scene00048.png
-    ./assets/canvas/Frames/scene00049.png
-    ./assets/canvas/Frames/scene00050.png
-    ./assets/canvas/Frames/scene00051.png
-    ./assets/canvas/Frames/scene00052.png
-    ./assets/canvas/Frames/scene00053.png
-    ./assets/canvas/Frames/scene00054.png
-    ./assets/canvas/Frames/scene00055.png
-    ./assets/canvas/Frames/scene00056.png
-    ./assets/canvas/Frames/scene00057.png
-    ./assets/canvas/Frames/scene00058.png
-    ./assets/canvas/Frames/scene00059.png
-    ./assets/canvas/Frames/scene00060.png
-    ./assets/canvas/Frames/scene00061.png
-    ./assets/canvas/Frames/scene00062.png
-    ./assets/canvas/Frames/scene00063.png
-    ./assets/canvas/Frames/scene00064.png
-    ./assets/canvas/Frames/scene00065.png
-    ./assets/canvas/Frames/scene00066.png
-    ./assets/canvas/Frames/scene00067.png
-    ./assets/canvas/Frames/scene00068.png
-    ./assets/canvas/Frames/scene00069.png
-    ./assets/canvas/Frames/scene00070.png
-    ./assets/canvas/Frames/scene00071.png
-    ./assets/canvas/Frames/scene00072.png
-    ./assets/canvas/Frames/scene00073.png
+    ./assets/canvas/scene00004.png
+    ./assets/canvas/scene00005.png
+    ./assets/canvas/scene00006.png
+    ./assets/canvas/scene00007.png
+    ./assets/canvas/scene00008.png
+    ./assets/canvas/scene00009.png
+    ./assets/canvas/scene00010.png
+    ./assets/canvas/scene00011.png
+    ./assets/canvas/scene00012.png
+    ./assets/canvas/scene00013.png
+    ./assets/canvas/scene00014.png
+    ./assets/canvas/scene00015.png
+    ./assets/canvas/scene00016.png
+    ./assets/canvas/scene00017.png
+    ./assets/canvas/scene00018.png
+    ./assets/canvas/scene00019.png
+    ./assets/canvas/scene00020.png
+    ./assets/canvas/scene00021.png
+    ./assets/canvas/scene00022.png
+    ./assets/canvas/scene00023.png
+    ./assets/canvas/scene00024.png
+    ./assets/canvas/scene00025.png
+    ./assets/canvas/scene00026.png
+    ./assets/canvas/scene00027.png
+    ./assets/canvas/scene00028.png
+    ./assets/canvas/scene00029.png
+    ./assets/canvas/scene00030.png
+    ./assets/canvas/scene00031.png
+    ./assets/canvas/scene00032.png
+    ./assets/canvas/scene00033.png
+    ./assets/canvas/scene00034.png
+    ./assets/canvas/scene00035.png
+    ./assets/canvas/scene00036.png
+    ./assets/canvas/scene00037.png
+    ./assets/canvas/scene00038.png
+    ./assets/canvas/scene00039.png
+    ./assets/canvas/scene00040.png
+    ./assets/canvas/scene00041.png
+    ./assets/canvas/scene00042.png
+    ./assets/canvas/scene00043.png
+    ./assets/canvas/scene00044.png
+    ./assets/canvas/scene00045.png
+    ./assets/canvas/scene00046.png
+    ./assets/canvas/scene00047.png
+    ./assets/canvas/scene00048.png
+    ./assets/canvas/scene00049.png
+    ./assets/canvas/scene00050.png
+    ./assets/canvas/scene00051.png
+    ./assets/canvas/scene00052.png
+    ./assets/canvas/scene00053.png
+    ./assets/canvas/scene00054.png
+    ./assets/canvas/scene00055.png
+    ./assets/canvas/scene00056.png
+    ./assets/canvas/scene00057.png
+    ./assets/canvas/scene00058.png
+    ./assets/canvas/scene00059.png
+    ./assets/canvas/scene00060.png
+    ./assets/canvas/scene00061.png
+    ./assets/canvas/scene00062.png
+    ./assets/canvas/scene00063.png
+    ./assets/canvas/scene00064.png
+    ./assets/canvas/scene00065.png
+    ./assets/canvas/scene00066.png
+    ./assets/canvas/scene00067.png
+    ./assets/canvas/scene00068.png
+    ./assets/canvas/scene00069.png
+    ./assets/canvas/scene00070.png
+    ./assets/canvas/scene00071.png
+    ./assets/canvas/scene00072.png
+    ./assets/canvas/scene00073.png
     `;
     return data.split("\n")[index];
   }
@@ -322,7 +322,7 @@ function sec3() {
   });
 }
 
-sec3();
+// sec3();
 
 function sec4() {
   gsap.to(".st", {
