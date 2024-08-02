@@ -71,7 +71,7 @@ function loader() {
   }, 5500);
 }
 
-loader();
+// loader();
 
 function menu() {
   var mbox = document.querySelector(".menubox");
@@ -86,7 +86,7 @@ function menu() {
         display: "flex",
         height: "100vh",
       });
-      gsap.to(".linkbox a", {
+      gsap.to(".linkbox .menulink", {
         delay: 0.3,
         opacity: 1,
         marginRight: "0vmax",
@@ -103,7 +103,7 @@ function menu() {
           mbox.style.bottom = "0%";
         },
       });
-      gsap.to(".linkbox a", {
+      gsap.to(".linkbox .menulink", {
         opacity: 0,
         marginRight: "10vmax",
         stagger: 0.1,
