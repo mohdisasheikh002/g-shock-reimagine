@@ -71,7 +71,7 @@ function loader() {
   }, 5500);
 }
 
-// loader();
+loader();
 
 function menu() {
   var mbox = document.querySelector(".menubox");
